@@ -1,5 +1,6 @@
 ﻿namespace TestAwsModeration
 {
+    using System.Diagnostics;
     using System.Reflection;
     using Talegen.Common.Core.Extensions;
     using Talegen.Imaging.Moderation;
@@ -30,14 +31,14 @@
 
             // define set of thresholds to evaluate
             settings.Thresholds = [ 
-                new ImageModerationThreshold { Type = ModerationLabelTypes.ExplicitNudity, MinimumConfidenceThreshold = .50F },
-                new ImageModerationThreshold { Type = ModerationLabelTypes.Suggestive, MinimumConfidenceThreshold = .50F },
-                new ImageModerationThreshold { Type = ModerationLabelTypes.HateSymbols, MinimumConfidenceThreshold = .50F },
-                new ImageModerationThreshold { Type = ModerationLabelTypes.RudeGestures, MinimumConfidenceThreshold = .50F },
-                new ImageModerationThreshold { Type = ModerationLabelTypes.Violence, MinimumConfidenceThreshold = .50F },
-                new ImageModerationThreshold { Type = ModerationLabelTypes.VisuallyDisturbing, MinimumConfidenceThreshold = .50F },
-                new ImageModerationThreshold { Type = ModerationLabelTypes.Gambling, MinimumConfidenceThreshold = .50F },
-                new ImageModerationThreshold { Type = ModerationLabelTypes.Drugs, MinimumConfidenceThreshold = .50F },
+                new ImageModerationThreshold { Type = ModerationLabelTypes.ExplicitNudity, MinimumConfidenceThreshold = 50F },
+                new ImageModerationThreshold { Type = ModerationLabelTypes.Suggestive, MinimumConfidenceThreshold = 50F },
+                new ImageModerationThreshold { Type = ModerationLabelTypes.HateSymbols, MinimumConfidenceThreshold = 50F },
+                new ImageModerationThreshold { Type = ModerationLabelTypes.RudeGestures, MinimumConfidenceThreshold = 50F },
+                new ImageModerationThreshold { Type = ModerationLabelTypes.Violence, MinimumConfidenceThreshold = 50F },
+                new ImageModerationThreshold { Type = ModerationLabelTypes.VisuallyDisturbing, MinimumConfidenceThreshold = 50F },
+                new ImageModerationThreshold { Type = ModerationLabelTypes.Gambling, MinimumConfidenceThreshold = 50F },
+                new ImageModerationThreshold { Type = ModerationLabelTypes.Drugs, MinimumConfidenceThreshold = 50F },
             ];
 
             AwsImageModerationService service = new AwsImageModerationService(settings);
@@ -48,6 +49,8 @@
             }
             else
             {
+                //Console.WriteLine(Directory.GetCurrentDirectory());
+
                 string directory = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty, "dataset");
                 DirectoryInfo directoryInfo = new DirectoryInfo(directory);
 

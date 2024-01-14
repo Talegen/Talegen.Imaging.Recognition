@@ -13,6 +13,6 @@
         /// <summary>
         /// Gets or sets a threshold rabge for a needs moderation result.
         /// </summary>
-        public float MinimumConfidenceThreshold { get; set; } = 0.5F;
+        public float MinimumConfidenceThreshold { get; set; } = 50F;
     }
 }

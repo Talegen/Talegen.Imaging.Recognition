@@ -13,8 +13,8 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Imaging.Recognition</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>AI;Image Recognition</PackageTags>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
-    <Version>1.0.0</Version>
+    <PackageReleaseNotes>Minor tweak to default minimum threshold.</PackageReleaseNotes>
+    <Version>1.0.1</Version>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>www.talegen.com</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
