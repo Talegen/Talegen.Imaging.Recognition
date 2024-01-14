@@ -398,4 +398,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Exclude the dataset test folder JPG
-tests/TestAwsModeration/dataset/*.jpg
+/tests/TestAwsModeration/dataset/*.jpg
+
+# Exculde the developer's local changes
+/tests/TestAwsModeration/Properties/launchSettings.json

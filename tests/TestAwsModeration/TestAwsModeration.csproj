@@ -9,11 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Talegen.Imaging.Moderation.Aws\Talegen.Imaging.Moderation.Aws.csproj" />
-    <ProjectReference Include="..\..\src\Talegen.Imaging.Moderation\Talegen.Imaging.Moderation.csproj" />
+    <PackageReference Include="Talegen.Imaging.Moderation" Version="1.0.0" />
+    <PackageReference Include="Talegen.Imaging.Moderation.Aws" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
