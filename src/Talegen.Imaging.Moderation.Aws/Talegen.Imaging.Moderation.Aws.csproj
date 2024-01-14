@@ -13,8 +13,8 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Imaging.Recognition</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>AWS;AI;Image Recognition</PackageTags>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
-    <Version>1.0.0</Version>
+    <PackageReleaseNotes>Updated to support latest package with fixed default minimum threshold.</PackageReleaseNotes>
+    <Version>1.0.1</Version>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>www.talegen.com</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -35,7 +35,7 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.Rekognition" Version="3.7.300.35" />
     <PackageReference Include="AWSSDK.S3" Version="3.7.305.10" />
-      <PackageReference Include="Talegen.Imaging.Moderation" Version="1.0.1" />
+    <PackageReference Include="Talegen.Imaging.Moderation" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
