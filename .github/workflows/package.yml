@@ -30,10 +30,10 @@ jobs:
            dotnet-version: '8.0.x'
            
     # Create the NuGet package in the folder from the environment variable NuGetDirectory
-    - run: dotnet pack ./src/Talegen.Imaging.Recognition/Talegen.Imaging.Recognition.csproj --configuration Release --output ${{env.NuGetDirectory}}
+    - run: dotnet pack ./src/Talegen.Imaging.Moderation/Talegen.Imaging.Moderation.csproj --configuration Release --output ${{env.NuGetDirectory}}
 
     # Create next package
-    - run: dotnet pack ./src/Talegen.Imaging.Recognition.AWs/Talegen.Imaging.Recognition.Aws.csproj --configuration Release --output ${{env.NuGetDirectory}}
+    - run: dotnet pack ./src/Talegen.Imaging.Moderation.AWs/Talegen.Imaging.Moderation.Aws.csproj --configuration Release --output ${{env.NuGetDirectory}}
 
     # Publish the NuGet package as an artifact, so they can be used in follow-on jobs
     - uses: actions/upload-artifact@v4
