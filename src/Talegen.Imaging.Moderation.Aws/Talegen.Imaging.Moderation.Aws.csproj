@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Talegen.Imaging.Moderation.Aws</Title>
+    <Company>Talegen, LLC</Company>
+    <Description>This library contains an image moderation service implementation for AWS Rekognition </Description>
+    <Copyright>Copyright (c) Talegen, LLC. All rights reserved.</Copyright>
+    <PackageIcon>Assets\logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Talegen/Talegen.Imaging.Recognition</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>AWS;AI;Image Recognition</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <Version>1.0.0</Version>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\logo.ico" />
+    <Content Include="Assets\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Rekognition" Version="3.7.300.35" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.305.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Talegen.Imaging.Moderation\Talegen.Imaging.Moderation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
