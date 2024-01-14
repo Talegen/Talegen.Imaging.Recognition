@@ -16,4 +16,8 @@
     <ProjectReference Include="..\..\src\Talegen.Imaging.Moderation\Talegen.Imaging.Moderation.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
 </Project>
