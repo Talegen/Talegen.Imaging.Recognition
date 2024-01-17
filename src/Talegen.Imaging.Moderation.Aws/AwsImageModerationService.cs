@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
     using Amazon.Rekognition;
@@ -45,11 +46,23 @@
         /// <returns>Returns a new <see cref="ImageModerationResult"/> with findings.</returns>
         public async Task<ImageModerationResult> EvaluateAsync(byte[] imageContents)
         {
+            using var stream = new System.IO.MemoryStream(imageContents);
+            var evaluationResult = await EvaluateAsync(stream);
+            return evaluationResult;
+        }
+
+        /// <summary>
+        /// This method is used to evalute the image contents passed in byte form.
+        /// </summary>
+        /// <param name="imageContents">Contains the bytes to evaluate.</param>
+        /// <returns>Returns a new <see cref="ImageModerationResult"/> with findings.</returns>
+        public async Task<ImageModerationResult> EvaluateAsync(MemoryStream memoryStream)
+        {
             var detectModerationLabelsRequest = new DetectModerationLabelsRequest
             {
                 Image = new Image()
                 {
-                    Bytes = new System.IO.MemoryStream(imageContents)
+                    Bytes = memoryStream
                 },
 
                 // set the minimum confidence to the minimum threshold setting.
