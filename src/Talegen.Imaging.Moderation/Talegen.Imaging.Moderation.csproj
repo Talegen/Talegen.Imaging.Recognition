@@ -14,7 +14,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>AI;Image Recognition</PackageTags>
     <PackageReleaseNotes>Minor tweak for additiona execution methods in interface.</PackageReleaseNotes>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>www.talegen.com</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
