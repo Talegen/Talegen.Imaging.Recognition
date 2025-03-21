@@ -90,7 +90,7 @@
                     }
                     else
                     {
-                        Console.WriteLine("No evalution result object found.");
+                        Console.WriteLine("No evaluation result object found.");
                     }
                 }
                 else

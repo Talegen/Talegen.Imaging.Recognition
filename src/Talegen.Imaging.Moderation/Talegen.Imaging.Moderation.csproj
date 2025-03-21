@@ -13,8 +13,8 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Imaging.Recognition</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>AI;Image Recognition</PackageTags>
-    <PackageReleaseNotes>Minor tweak for additiona execution methods in interface.</PackageReleaseNotes>
-    <Version>1.0.3</Version>
+    <PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
+    <Version>1.0.4</Version>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>www.talegen.com</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Talegen.Common.Core" Version="1.0.11" />
+    <PackageReference Include="Talegen.Common.Core" Version="1.1.0" />
   </ItemGroup>
 
 </Project>
